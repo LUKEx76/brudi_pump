@@ -18,12 +18,15 @@ class _ProgramScreenState extends State<ProgramScreen> {
     Exercise pullUps = Exercise(name: "Pull Ups", sets: 3, timePerSetInSec: 90);
     Exercise crunches =
         Exercise(name: "Crunches", sets: 3, timePerSetInSec: 90);
+    Exercise letMeIns =
+        Exercise(name: "One Arm Let me ins", sets: 3, timePerSetInSec: 90);
 
     List<Exercise> exerciseList1 = List<Exercise>();
     exerciseList1.add(pushUps);
     exerciseList1.add(squats);
     exerciseList1.add(pushUps);
     exerciseList1.add(squats);
+    exerciseList1.add(letMeIns);
     exerciseList1.add(pushUps);
     exerciseList1.add(squats);
     exerciseList1.add(pushUps);
@@ -52,31 +55,34 @@ class _ProgramScreenState extends State<ProgramScreen> {
     Program activeProgram =
         Program(name: "Test Program", workouts: workoutList);
     activeProgram.workouts[0].completed = true;
+    activeProgram.workouts[1].completed = true;
     // --
 
     return Scaffold(
-      appBar: AppBar(title: Text("brudi_pump")),
+      appBar: AppBar(title: Text("Program Overview")),
       backgroundColor: Colors.grey[300],
       body: activeProgram.workouts.length == 0
           ? Center(child: Text("No Program selected"))
-          : Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
-              child: ListView(
-                children: <Widget>[
-                  for (var i = 0;
-                      i <= activeProgram.programDurationInWeeks;
-                      i++)
-                    Container(
-                      child: Column(
-                        children: <Widget>[
-                          WeekCard(program: activeProgram, weekIndex: i),
-                          //SizedBox(height: 10),
-                          if (i < activeProgram.programDurationInWeeks)
-                            Divider(color: Colors.black, thickness: 2),
-                        ],
+          : SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
+                child: ListView(
+                  children: <Widget>[
+                    for (var i = 0;
+                        i <= activeProgram.programDurationInWeeks;
+                        i++)
+                      Container(
+                        child: Column(
+                          children: <Widget>[
+                            WeekCard(program: activeProgram, weekIndex: i),
+                            //SizedBox(height: 10),
+                            if (i < activeProgram.programDurationInWeeks)
+                              Divider(color: Colors.black, thickness: 2),
+                          ],
+                        ),
                       ),
-                    ),
-                ],
+                  ],
+                ),
               ),
             ),
     );

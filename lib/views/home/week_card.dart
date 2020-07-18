@@ -1,6 +1,5 @@
 import 'package:brudi_pump/models/program.dart';
 import 'package:brudi_pump/models/workout.dart';
-import 'package:brudi_pump/views/home/workout_card_collapsed.dart';
 import 'package:brudi_pump/views/home/workout_card_expanded.dart';
 import 'package:flutter/material.dart';
 
@@ -24,9 +23,9 @@ class WeekCard extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   if (this.program.focusedWorkouts.contains(workouts[i]))
-                    WorkoutCardExpanded(workout: workouts[i])
+                    WorkoutCard(workout: workouts[i], isFocused: true)
                   else
-                    WorkoutCardCollapsed(workout: workouts[i]),
+                    WorkoutCard(workout: workouts[i], isFocused: false),
                   if (i + 1 < workouts.length) Divider(),
                 ],
               ),

@@ -18,8 +18,7 @@ class Workout {
     for (var exercise in exercises) {
       timeInSec += exercise.timePerSetInSec * exercise.sets;
     }
-    int hours = (timeInSec / 3600).floor();
-    int minutes = ((timeInSec % 3600) / 60).floor();
-    return hours.toString() + "h " + minutes.toString() + "min";
+    int minutes = (timeInSec % 3600 / 60).floor();
+    return minutes.toString() + "min";
   }
 }
