@@ -13,13 +13,22 @@ class _ProgramScreenState extends State<ProgramScreen> {
   @override
   Widget build(BuildContext context) {
     //Creation of a Test Workout
-    Exercise pushUps = Exercise(name: "Push Ups", sets: 3, timePerSetInSec: 90);
-    Exercise squats = Exercise(name: "Squats", sets: 3, timePerSetInSec: 90);
-    Exercise pullUps = Exercise(name: "Pull Ups", sets: 3, timePerSetInSec: 90);
+    Exercise pushUps = Exercise(
+        name: "Push Ups",
+        sets: 3,
+        timePerSetInSec: 90,
+        imagePath: "chest_push_ups_flat_wide_grip_2.png");
+    Exercise squats =
+        Exercise(name: "Squats", sets: 3, timePerSetInSec: 90, imagePath: "");
+    Exercise pullUps =
+        Exercise(name: "Pull Ups", sets: 3, timePerSetInSec: 90, imagePath: "");
     Exercise crunches =
-        Exercise(name: "Crunches", sets: 3, timePerSetInSec: 90);
-    Exercise letMeIns =
-        Exercise(name: "One Arm Let me ins", sets: 3, timePerSetInSec: 90);
+        Exercise(name: "Crunches", sets: 3, timePerSetInSec: 90, imagePath: "");
+    Exercise letMeIns = Exercise(
+        name: "One Arm Let me ins",
+        sets: 3,
+        timePerSetInSec: 90,
+        imagePath: "");
 
     List<Exercise> exerciseList1 = List<Exercise>();
     exerciseList1.add(pushUps);

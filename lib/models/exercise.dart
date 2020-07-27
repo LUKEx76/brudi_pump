@@ -3,7 +3,7 @@ class Exercise {
   int sets;
   int timePerSetInSec;
   //Reps
-  //Pic
+  String imagePath;
 
-  Exercise({this.name, this.sets, this.timePerSetInSec});
+  Exercise({this.name, this.sets, this.timePerSetInSec, this.imagePath});
 }

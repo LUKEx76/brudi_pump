@@ -35,16 +35,3 @@ class WeekCard extends StatelessWidget {
     );
   }
 }
-
-/*
-ExpansionPanelList(
-          children: week.workouts.map<ExpansionPanel>((Workout workout) {
-            return ExpansionPanel(
-              headerBuilder: (BuildContext context, bool isExpanded) {
-                return WorkoutCard(workout: workout);
-              },
-              body: Text("Hi"),
-            );
-          }).toList(),
-        ),
-*/
