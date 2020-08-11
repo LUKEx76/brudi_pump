@@ -27,11 +27,11 @@ class _WorkoutPreviewScreenState extends State<WorkoutPreviewScreen> {
               children: <Widget>[
                 Text(
                   this.widget.workout.name,
-                  style: TextStyle(fontSize: 30),
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
                 Text(
                   this.widget.workout.workoutDuration,
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 40),
                 ),
                 Column(
                   children: <Widget>[

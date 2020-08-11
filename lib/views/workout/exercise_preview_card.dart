@@ -24,7 +24,8 @@ class ExercisePreviewCard extends StatelessWidget {
                     ? Icon(Icons.accessibility_new)
                     : Image(
                         image: AssetImage(
-                            "assets/images/exercises/" + exercise.imagePath)),
+                            "assets/images/exercises/" + exercise.imagePath),
+                      ),
               ),
               Text(
                 exercise.name,
