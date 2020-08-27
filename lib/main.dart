@@ -10,8 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      //Have to check what Theme does
       theme: ThemeData(
+        canvasColor: Colors.teal[200],
+        iconTheme: IconThemeData(
+          color: Colors.black,
+        ),
         primarySwatch: Colors.grey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
